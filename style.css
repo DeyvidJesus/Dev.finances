@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+:root {
+    --color-darkblue: #362f5f;
+    --color-dargreen: #2d4a22;
+}
+
+/* GLOBAL ============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 93.75%;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-darkblue);
+    font-weight: normal;
+}
+
+a {
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+.button.new {
+    margin-bottom: .8rem;
+    display: inline-block;
+}
+
+/* HEADER ============================= */
+
+header{
+    background-color: var(--color-dargreen);
+    color: #fff;
+    padding: 2rem 0 10rem;
+    text-align: center;
+    width: 100%;
+}
+
+#logo {
+    font-weight: 100;
+}
+
+/* BALANCE ============================== */
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: #fff;
+    margin-top: 0;
+}
+
+/* CARDS =============================== */
+
+.card {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: .25rem;
+    margin-bottom: 2rem;
+    color: var(--color-darkblue);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card:last-child {
+    background-color: #49aa26;
+    color: #fff;
+}
+
+/* TABLE =============================== */
+
+#transaction {
+    display: block;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+}
+
+table th {
+    background-color: #fff;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table td {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    font-weight: normal;
+}
+
+.description {
+    color: var(--color-darkblue);
+}
+
+.income {
+    color: #12a454;
+}
+
+.expense {
+    color: #e92929;
+}
+
+table tbody tr {
+    opacity: .7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table thead tr th, table tbody tr td {
+    border-radius: 0.25rem;
+}
+
+.remove-image:hover {
+    cursor: pointer;
+}
+
+/* MODAL =============================== */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+}
+
+/* FORMULARIO =============================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+form input {
+    border: none;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+form p {
+    margin-top: 1rem;
+}
+
+#buttons-container {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cancel-button {
+    border: solid 1px #e92929;
+    width: 47%;
+    color: #e92929;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cancel-button:hover {
+    cursor: pointer;
+}
+
+#save-button {
+    border: solid 1px #49aa26;
+    background: #49aa26;
+    width: 47%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+}
+
+#save-button:hover {
+    cursor: pointer;
+} 
+
+.help {
+    margin-top: 1rem;
+    opacity: .6;
+}
+
+/* FOOTER =============================== */
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--color-darkblue);
+    opacity: .6;
+}
+
+/* RESPONSIVIDADE =============================== */
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+}
