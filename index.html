@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev.finance$</title>
+
+    <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon Link -->
     <link rel="shortcut icon" href="img/icons8-heavy-dollar-sign-48.png" type="image/x-icon">
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
         <img src="img/logo.svg" alt="Logo Dev Finance">
     </header>
 
+    <!-- Seção principal -->
     <main class="container">
+
+        <!-- Balanço financeiro com entradas, saídas e total -->
         <section id="balance">
             <h2 class="sr-only">Balanço</h2>
+
+            <!-- Card das entradas -->
             <div class="card">
                 <h3>
                     <span>Entradas</span>
@@ -23,6 +34,8 @@
                 </h3>
                 <p id="incomes">R$ 0,00</p>
             </div>
+
+            <!-- Card das saídas -->
             <div class="card">
                 <h3>
                     <span>Saídas</span>
@@ -30,6 +43,8 @@
                 </h3>
                 <p id="expenses">R$ 0,00</p>
             </div>
+
+            <!-- Card do total -->
             <div class="card">
                 <h3>
                     <span>Total</span>
@@ -39,10 +54,14 @@
             </div>
         </section>
 
+        <!-- Transações -->
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
+            <!-- Link para adicionar nova transação -->
             <a href="#" class="new button" onclick="Modal.open()">+ Nova transação</a>
+
+            <!-- Tabela das transações-->
             <table id="data-table">
                 <thead>
                     <tr>
@@ -58,8 +77,11 @@
         </section>
     </main>
 
+    <!-- Modal -->
     <div class="modal-overlay">
         <div class="modal">
+
+            <!-- Formulário para capturar os dados da nova transação -->
             <form action="" onsubmit="Form.submit(event)">
                 <h2>Nova Transação</h2>
                 <label class="sr-only" for="description">Descrição</label>
@@ -80,6 +102,7 @@
         </div>
     </div>
 
+    <!-- Rodapé -->
     <footer>
         <p>dev.finance$</p>
     </footer>
